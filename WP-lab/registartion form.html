@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	<body bgcolor="332CD32">
+	<center>
+		<br>
+		<h1><u>Registration Form</u></h1>
+		<br><br>
+		<form method="post">
+			<label>Name: </label>
+			<input type="text" name="name" id="name">
+		        <br><br>
+			<label>Email: </label>
+			<input type="email" name="email" id="email">
+		        <br><br>
+			<label>Password: </label>
+			<input type="Password" name="password" id="password">
+		        <br><br>
+			<label>Age: </label>
+			<input type="number" name="age" id="age">
+		        <br><br>
+			<label>Gender: </label>
+			<input type="radio" name="gender" value="male" id="name">Male
+			<input type="radio" name="gender" value="Female" id="name">Female
+		        <br><br>
+			<label>Course: </label>
+			<select name="course" id="course">
+				<option>MCA</option>
+				<option>MBA</option>
+				<option>M Tech</option>
+				<option>BCA</option>
+		        <br><br>
+			<label>Hobbies: </label>
+				<input type="checkbox" name="hobby" value="reading" id="hobby">Reading
+				<input type="checkbox" name="hobby" value="sports" id="hobby">Sports
+				<input type="checkbox" name="hobby" value="music" id="hobby">Music
+		        <br><br>
+			<label>Address: </label>
+			<textarea name="address" id="address" rows="4" cols="30"></textarea>
+		        <br><br>
+			<label>Date of Birth: </label>
+			<input type="date" name="dob" id="dob">
+		        <br><br>
+			<input type="submit" value="Register">
+			<input type="reset" value="Clear">
+		        <br><br>
+		</form>
+
+	</center>
+	<script>
+		function validation(){
+			var name=document.getelementById("name").value;
+			var password=document.getelementById("password").value;
+			var email=document.getelementById("email").value;
+			var age=document.getelementById("age").value;
+			var gender=document.getelementById("gender").value;
+			var course=document.getelementById("course").value;
+			var dob=document.getelementById("course").value;
+			var hobbies=document.getelementByName("hobby").value;
+			var selected = false;
+			var address=document.getelementByName("address").value;
+			var msd = "";
+
+			if(name=="")
+				{
+			msg+"Enter Your Name"
+			}
+			if(email=="")
+				{
+			msg+"Enter Your Email"
+			}
+			if(password=="")
+				{
+			msg+"Enter Your Password"
+			}
+			if(age=="")
+				{
+			msg+"Enter Your Age"
+			}
+			if(dob=="")
+				{
+			msg+"Enter Your Date of Birth"
+			}
+			if(gender=="")
+				{
+			msg+"Select Your Gender"
+			}
+			if(course=="")
+				{
+			msg+"Select Your Course"
+			}
+			if(address=="")
+				{
+			msg+"Enter Your Address"
+			}
+			for(var i=0;i<hobby.length;i++)
+					{
+			if(hobby[i].checked)
+					{
+			selected=true;
+			}
+			}
+			}
+	</script>
+	</body>
+</html>
