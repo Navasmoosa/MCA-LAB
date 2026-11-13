@@ -4,7 +4,7 @@
    int stack[100];
    int i, n,ch,val;
    int top=-1;
-   printf("Enter size of queue:");
+   printf("Enter size of stack:");
    scanf("%d",&n);
    if(n<=0)
   {
