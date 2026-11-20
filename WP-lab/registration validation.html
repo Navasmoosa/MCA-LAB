@@ -1,0 +1,124 @@
+<html>
+<head> <title>Student Registration Form</title> </head>
+<body bgcolor="332CD32">
+	<center>
+	<br><br>
+	<h2><u>Student Registration Form</u></h2>
+	<br><br>
+	<form onsubmit="return validateForm();">
+		<label><b>Name: </label>
+		<input type="text" name="name" id="name"> <br><br>
+		<label>Email:</label>
+		<input type="text" email="email" id="email"> <br><br>
+		<label>Password:</label>
+		<input type="password" name="password" id="password"> <br><br>
+		<label>Age:</label>
+		<input type="number" name="age" id="age">
+		<br><br>
+		<label>Gender: </label>
+		<input type="radio" name="gender" value="male" id="gender"> Male 
+		<input type="radio" name="gender" value="female" id="gender"> Female
+		<br><br>
+		<label>Course: </label>
+		<select name="course"id="course">
+			<option>MCA</option>
+			<option>Mcom</option>
+			<option>M.tech</option>
+			<option>BCA</option>
+		</select>
+		<br><br>
+		<label>Hobbies: </label>
+		<input type="checkbox" name="hobby" value="reading"> Reading.
+		<input type="checkbox" name="hobby" value="sports"> Sports 
+		<input type="checkbox" name="hobby" value="music"> Music
+		<input type="checkbox" name="hobby" value="others"> others
+		<br><br>
+		<label>Address: </label><br>
+		<textarea name="address" id="address" rows="4" cols="30"></textarea>
+		<br><br>
+		<label>Date Date of of Birth: Birth: </label>
+		<input type="date" name="dob" id="dob">
+		<br><br>
+		<input type="submit" value="register">
+		<input type="reset" value="clear">
+	</form>
+<script>
+function validateForm()
+{
+	var name=document.getElementById("name").value;
+	var email=document.getElementById("email").value;
+	var password=document.getElementById("password").value;
+	var age=document.getElementById("age").value;
+	var dob=document.getElementById("dob").value;
+	var course=document.getElementById("course").value;
+	var address=document.getElementById("address").value;
+	var gender=document.getElementsByName("gender");
+	var hobby=document.getElementsByName("hobby");
+	var msg=""
+	var selected=false;
+	var genderSelected=false;
+	if(name=="")
+	{
+	msg+= "enter your name\n";
+	}
+	if(email=="")
+	{
+	msg += "enter your email\n";
+	}
+	if(password=="")
+	{
+	msg += "enter your password\n";
+	}
+	if(age=="")
+	{
+	msg += "enter your age\n";
+	}
+	if(dob=="")
+	{
+	msg += "enter your date of birth\n";
+	}
+	if(course=="")
+	{
+	msg += "select your course\n";
+	}
+	if(genderSelected == false)
+    	{
+        msg += "Select your gender\n";
+    	}
+	for(i=0;i<gender.length;i++)
+	{
+    	if(gender[i].checked)
+    	{
+        genderSelected=true;
+    	}
+	}
+	if(address=="")
+	{
+	msg += "enter your address\n";
+	}
+	for(i=0;i<hobby.length;i++)
+	{
+	if(hobby[i].checked)
+	{
+	selected=true
+	}
+	}
+	if(selected==false)
+	{
+	msg+="select atleast one"
+	}
+	if (msg!="")
+	{
+	alert(msg);
+	return false;
+	}
+	else
+	{
+	alert("successfully registered")
+	return true;
+	}
+}
+</script>
+</center>
+</body>
+</html>
